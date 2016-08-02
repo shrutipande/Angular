@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drop And Drag</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/style.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h3>STEP 1</h3>
+      <ul data-hotel ondrop="drop(event)" ondragover="allowDrop(event)">
+        <li><h5>HOTEL</h5></li>
+      </ul>
+    </div>
+    <div>
+      <h3>STEP 2</h3>
+      <ul data-location ondrop="drop(event)" ondragover="allowDrop(event)">
+        <li><h5>LOCATION</h5></li>
+      </ul>
+    </div>
+    <div>
+      <h3>STEP 3</h3>
+      <ul data-location>
+        <li><h5>LOCATION</h5></li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+    <div id="id01"></div>
+  </div>
+</body>
+</html>

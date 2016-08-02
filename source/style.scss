@@ -1,0 +1,60 @@
+.container > div {
+  width: 33.33%;
+  float: left;
+  padding: 15px;
+}
+.container > div h3 {
+  text-align: center;
+}
+.container > div ul {
+  border: solid 1px #dedede;
+  list-style: none;
+  padding: 0px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #dedede;
+  max-width: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+.container > div ul li {
+  display: block;
+  text-align: center;
+}
+.container > div ul li h5 {
+  padding: 10px 15px;
+  margin: 0px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.container > div ul li a, .container > div ul li span {
+  display: block;
+  padding: 10px 0px;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.container [data-hotel] li h5 {
+  background-color: #6eb0e5;
+  color: #fff;
+}
+.container .hotel {
+  background-color: #c7dff6 !important;
+  border-bottom: solid 1px #accde1 !important;
+  color: #4f8bbb !important;
+  cursor: pointer;
+}
+.container .location {
+  color: #80cb9a;
+  background-color: #daedd5;
+  border-bottom: solid 1px #c5d8c0;
+}
+.container [data-location] li h5 {
+  background-color: #80cb9a;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
+// Library
+@import "sass/lib/_bootstrap.scss";
+//
