@@ -20,6 +20,7 @@
     "grunt-sass": "^1.2.0"
   },
   "dependencies": {
-    "bower-requirejs": "^1.2.0"
+    "bower-requirejs": "^1.2.0",
+    "node-sass": "^3.8.0"
   }
 }
