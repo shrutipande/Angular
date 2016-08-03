@@ -1,10 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
 .nopadding {
   padding: 0px !important;
 }
 
-.shopping_cart_container h1 {
-  margin: 15px 0px 30px 0px !important;
-  font-size: 30px;
+.container {
+  max-width: 755px;
+}
+
+header {
+  border-bottom: solid 1px #e5e5e5;
+  padding: 0px 15px;
+  float: left;
+  width: 100%;
+  text-transform: uppercase;
+}
+header h1 {
+  margin: 0px !important;
+  font-size: 35px;
+  color: #5c5c5e;
+  font-weight: 300;
+  padding: 20px 0px 35px 0px !important;
+}
+@media only screen and (max-width: 767px) {
+  header h1 {
+    font-size: 20px;
+    padding: 15px 0px 15px 0px !important;
+  }
+}
+header .list-count {
+  padding: 15px 0px 15px 0px !important;
+  text-align: right;
+  line-height: 21px;
+  color: #939393;
+  font-size: 12px;
+}
+header .list-count span {
+  font-weight: 600;
+  color: #666;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.subnav {
+  padding: 15px;
+  border-bottom: solid 6px #dddbdc;
+  color: #939393;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.subnav span {
+  font-weight: 600;
+  color: #666;
+  display: inline-block;
+  margin-right: 5px;
+}
+.subnav ul {
+  margin: 0px;
+  padding: 0px;
+  float: right;
+  list-style: none;
+}
+.subnav ul li {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+}
+@media only screen and (min-width: 1023px) {
+  .subnav ul li {
+    width: 90px;
+  }
+}
+
+.card-list-container {
+  border-bottom: solid 1px #e5e5e5;
+  padding: 15px;
+}
+.card-list-container .card-list-left, .card-list-container .card-list-right {
+  padding: 0px !important;
+}
+.card-list-container .img_wrapper {
+  padding: 0px !important;
+  text-align: center;
+}
+.card-list-container .card_details h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #636363;
+  margin: 10px 0px 2px 0px;
+}
+.card-list-container .card_details p {
+  color: #939393;
+  margin: 0px 0px 2px 0px;
+  font-size: 12px;
+  padding: 0px 0px 0px 3px;
+}
+.card-list-container [data-action] {
+  padding: 0px;
+  list-style: none;
+  float: left;
+  width: 100%;
+}
+@media only screen and (min-width: 1023px) {
+  .card-list-container [data-action] {
+    margin: 50px 0px 0px 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .card-list-container [data-action] {
+    margin: 0px;
+    text-align: center;
+  }
+}
+.card-list-container [data-action] li {
+  display: inline-block;
+  color: #939393;
+  margin-right: 5px;
+}
+.card-list-container [data-action] li a {
+  text-transform: uppercase;
+  color: #939393;
+  text-decoration: none;
+  font-size: 12px;
+}
+.card-list-container [data-action] li a span {
+  font-weight: 700;
+}
+.card-list-container [data-quantity] {
+  margin: 10px 0px 0px 0px;
+  padding: 0px 0px 0px 3px;
+  text-align: right;
+}
+@media only screen and (max-width: 767px) {
+  .card-list-container [data-quantity] {
+    margin: 12px 0px 0px 0px;
+    width: 100%;
+    float: left;
+    text-align: left;
+  }
+}
+.card-list-container [data-quantity] li {
+  display: inline-block;
+  width: 70px;
+  font-size: 12px;
+  color: #828080;
+}
+@media only screen and (max-width: 767px) {
+  .card-list-container [data-quantity] li {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  .card-list-container [data-quantity] li {
+    width: 75px;
+  }
+}
+.card-list-container [data-quantity] li input {
+  width: 30px;
+  height: 26px;
+  text-align: center;
+  font-weight: 700;
+  color: #59595b;
+  border: solid 1px #939393;
+}
+.card-list-container [data-quantity] li span {
+  text-align: center;
+  font-weight: 700;
+  color: #59595b;
+  font-size: 20px;
+  display: inline-block;
+}
+@media only screen and (min-width: 1023px) {
+  .card-list-container [data-quantity] li span {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  .card-list-container [data-quantity] li:nth-of-type(3n+1) {
+    text-align: center;
+  }
+}
+.card-list-container:last-child {
+  border-bottom: solid 6px #dddbdc;
+}
+
+footer {
+  padding: 15px;
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -330,7 +512,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;

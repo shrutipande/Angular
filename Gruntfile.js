@@ -17,7 +17,7 @@ module.exports = function(grunt) {
           src: 'source',
           app: 'app',
           assets: 'app',
-          css: ['<%= project.src %>/style.scss'],
+          css: ['<%= project.src %>/sass/style.scss'],
           js: ['<%= project.src %>/js/*.js']
         },
         // SASS
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
           options: {livereload: true},
           sass: {
             // We watch and compile sass files as normal but don't live reload here
-            files: ['<%= project.src %>/{,*/}*.{scss,sass}'],
+            files: ['<%= project.src %>/sass/{,*/}*.{scss,sass}'],
             tasks: ['sass', 'cssmin'],
           },
           livereload: {
