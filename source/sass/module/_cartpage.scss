@@ -90,6 +90,12 @@ header {
       margin: 0px 0px 2px 0px;
       font-size: 12px;
       padding: 0px 0px 0px 3px;
+      [style] {
+        text-transform: uppercase;
+      }
+      [color] {
+        text-transform: capitalize;
+      }
     }
   }
   [data-action] {
@@ -163,6 +169,7 @@ header {
       &:nth-of-type(3n+1) {
         @media only screen and (min-width:1023px) {
           text-align: center;
+          text-transform: uppercase;
         }
       }
     }

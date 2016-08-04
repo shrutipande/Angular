@@ -10,7 +10,7 @@
     <!-- // Header End -->
     <!-- // Subnav Start -->
     <div class="col-xs-12 subnav hidden-xs">
-      <div class="col-xs-3 col-sm-6 nopadding text-left items"><span>3</span>Items</div>
+      <div class="col-xs-3 col-sm-6 nopadding text-left items"><span>{{ products.length }}</span>Items</div>
       <div class="col-xs-9 col-sm-6 nopadding text-right">
         <ul>
           <li>Size</li>
@@ -21,22 +21,23 @@
     </div>
     <!-- // Subnav End -->
     <!-- // Card List Start -->
-    <div class="col-xs-12 card-list-container">
+    <div class="col-xs-12 card-list-container" ng-repeat="(key, product) in products">
       <div class="col-sm-8 col-xs-12 card-list-left">
         <div class="col-xs-6 col-sm-4 img_wrapper">
           <img src="img/T1.jpg" alt="">
         </div>
         <!-- // -->
         <div class="col-xs-6 col-sm-8 card_details">
-          <h2>solid green cotton tshirt</h2>
-          <p>Style #: <span>MS13KT1906</span></p>
-          <p>Color: <span>Blue</span></p>
-          <p class="visible-xs">Size: <span>S</span></p>
+          <h2>{{ products[key].p_name }}</h2>
+          <!-- <h2>solid green cotton tshirt</h2> -->
+          <p>Style #: <span style>{{ products[key].p_style }}</span></p>
+          <p>Color: <span color>{{  products[key].p_selected_color.name }}</span></p>
+          <p class="visible-xs">Size: <span>{{ products[key].p_selected_size.code }}</span></p>
           <!-- // -->
           <div class="col-xs-12 nopadding visible-xs quantity_wrappr">
             <ul data-quantity="">
               <li>QTY: <input type="text" value="1"></li>
-              <li><sup>$</sup><span>11.00</span></li>
+              <li><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice }}</span></li>
             </ul>
           </div>
           <!-- // -->
@@ -62,156 +63,9 @@
       </div>
       <div class="col-sm-4 col-xs-12 card-list-right hidden-xs">
         <ul data-quantity="">
-          <li>S</li>
+          <li>{{ products[key].p_selected_size.code }}</li>
           <li><input type="text" value="1"></li>
-          <li><sup>$</sup><span>11.00</span></li>
-        </ul>
-      </div>
-    </div>
-    <!-- // Card List End -->
-    <!-- // Card List Start -->
-    <div class="col-xs-12 card-list-container">
-      <div class="col-sm-8 col-xs-12 card-list-left">
-        <div class="col-xs-6 col-sm-4 img_wrapper">
-          <img src="img/T2.jpg" alt="">
-        </div>
-        <!-- // -->
-        <div class="col-xs-6 col-sm-8 card_details">
-          <h2>solid green cotton tshirt</h2>
-          <p>Style #: <span>MS13KT1906</span></p>
-          <p>Color: <span>Blue</span></p>
-          <p class="visible-xs">Size: <span>S</span></p>
-          <!-- // -->
-          <div class="col-xs-12 nopadding visible-xs quantity_wrappr">
-            <ul data-quantity="">
-              <li>QTY: <input type="text" value="1"></li>
-              <li><sup>$</sup><span>11.00</span></li>
-            </ul>
-          </div>
-          <!-- // -->
-          <ul data-action="" class="hidden-xs">
-            <li><a href="#">EDIT</a></li>
-            <li>|</li>
-            <li><a href="#"><span>X</span> Remove</a></li>
-            <li>|</li>
-            <li><a href="#">Save for Later</a></li>
-          </ul>
-        </div>
-        <!-- // -->
-        <div class="col-xs-12 nopadding visible-xs-">
-          <ul data-action="" class="visible-xs">
-            <li><a href="">EDIT</a></li>
-            <li>|</li>
-            <li><a href=""><span>X</span> Remove</a></li>
-            <li>|</li>
-            <li><a href="">Save for Later</a></li>
-          </ul>
-        </div>
-        <!-- // -->
-      </div>
-      <div class="col-sm-4 col-xs-12 card-list-right hidden-xs">
-        <ul data-quantity="">
-          <li>S</li>
-          <li><input type="text" value="1"></li>
-          <li><sup>$</sup><span>11.00</span></li>
-        </ul>
-      </div>
-    </div>
-    <!-- // Card List End -->
-    <!-- // Card List Start -->
-    <div class="col-xs-12 card-list-container">
-      <div class="col-sm-8 col-xs-12 card-list-left">
-        <div class="col-xs-6 col-sm-4 img_wrapper">
-          <img src="img/T3.jpg" alt="">
-        </div>
-        <!-- // -->
-        <div class="col-xs-6 col-sm-8 card_details">
-          <h2>solid green cotton tshirt</h2>
-          <p>Style #: <span>MS13KT1906</span></p>
-          <p>Color: <span>Blue</span></p>
-          <p class="visible-xs">Size: <span>S</span></p>
-          <!-- // -->
-          <div class="col-xs-12 nopadding visible-xs quantity_wrappr">
-            <ul data-quantity="">
-              <li>QTY: <input type="text" value="1"></li>
-              <li><sup>$</sup><span>11.00</span></li>
-            </ul>
-          </div>
-          <!-- // -->
-          <ul data-action="" class="hidden-xs">
-            <li><a href="#">EDIT</a></li>
-            <li>|</li>
-            <li><a href="#"><span>X</span> Remove</a></li>
-            <li>|</li>
-            <li><a href="#">Save for Later</a></li>
-          </ul>
-        </div>
-        <!-- // -->
-        <div class="col-xs-12 nopadding visible-xs-">
-          <ul data-action="" class="visible-xs">
-            <li><a href="">EDIT</a></li>
-            <li>|</li>
-            <li><a href=""><span>X</span> Remove</a></li>
-            <li>|</li>
-            <li><a href="">Save for Later</a></li>
-          </ul>
-        </div>
-        <!-- // -->
-      </div>
-      <div class="col-sm-4 col-xs-12 card-list-right hidden-xs">
-        <ul data-quantity="">
-          <li>S</li>
-          <li><input type="text" value="1"></li>
-          <li><sup>$</sup><span>11.00</span></li>
-        </ul>
-      </div>
-    </div>
-    <!-- // Card List End -->
-    <!-- // Card List Start -->
-    <div class="col-xs-12 card-list-container">
-      <div class="col-sm-8 col-xs-12 card-list-left">
-        <div class="col-xs-6 col-sm-4 img_wrapper">
-          <img src="img/T4.jpg" alt="">
-        </div>
-        <!-- // -->
-        <div class="col-xs-6 col-sm-8 card_details">
-          <h2>solid green cotton tshirt</h2>
-          <p>Style #: <span>MS13KT1906</span></p>
-          <p>Color: <span>Blue</span></p>
-          <p class="visible-xs">Size: <span>S</span></p>
-          <!-- // -->
-          <div class="col-xs-12 nopadding visible-xs quantity_wrappr">
-            <ul data-quantity="">
-              <li>QTY: <input type="text" value="1"></li>
-              <li><sup>$</sup><span>11.00</span></li>
-            </ul>
-          </div>
-          <!-- // -->
-          <ul data-action="" class="hidden-xs">
-            <li><a href="#">EDIT</a></li>
-            <li>|</li>
-            <li><a href="#"><span>X</span> Remove</a></li>
-            <li>|</li>
-            <li><a href="#">Save for Later</a></li>
-          </ul>
-        </div>
-        <!-- // -->
-        <div class="col-xs-12 nopadding visible-xs-">
-          <ul data-action="" class="visible-xs">
-            <li><a href="">EDIT</a></li>
-            <li>|</li>
-            <li><a href=""><span>X</span> Remove</a></li>
-            <li>|</li>
-            <li><a href="">Save for Later</a></li>
-          </ul>
-        </div>
-        <!-- // -->
-      </div>
-      <div class="col-sm-4 col-xs-12 card-list-right hidden-xs">
-        <ul data-quantity="">
-          <li>S</li>
-          <li><input type="text" value="1"></li>
-          <li><sup>$</sup><span>11.00</span></li>
+          <li><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice }}</span></li>
         </ul>
       </div>
     </div>

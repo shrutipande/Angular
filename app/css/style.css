@@ -94,6 +94,12 @@ header .list-count span {
   font-size: 12px;
   padding: 0px 0px 0px 3px;
 }
+.card-list-container .card_details p [style] {
+  text-transform: uppercase;
+}
+.card-list-container .card_details p [color] {
+  text-transform: capitalize;
+}
 .card-list-container [data-action] {
   padding: 0px;
   list-style: none;
@@ -179,6 +185,7 @@ header .list-count span {
 @media only screen and (min-width: 1023px) {
   .card-list-container [data-quantity] li:nth-of-type(3n+1) {
     text-align: center;
+    text-transform: uppercase;
   }
 }
 
