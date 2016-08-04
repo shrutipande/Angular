@@ -1,0 +1,78 @@
+<section class="container-fluid nopadding">
+  <div class="container shopping_cart_container nopadding">
+    <!-- // Header Start -->
+    <header>
+      <div class="col-sm-12 col-xs-9 nopadding">
+        <h1>YOUR SHOPPING BAG</h1>
+      </div>
+      <div class="col-xs-3 visible-xs list-count"><span>3</span>Items</div>
+    </header>
+    <!-- // Header End -->
+    <!-- // Subnav Start -->
+    <div class="col-xs-12 subnav hidden-xs">
+      <div class="col-xs-3 col-sm-6 nopadding text-left items"><span>3</span>Items</div>
+      <div class="col-xs-9 col-sm-6 nopadding text-right">
+        <ul>
+          <li>Size</li>
+          <li>Qty</li>
+          <li>Price</li>
+        </ul>
+      </div>
+    </div>
+    <!-- // Subnav End -->
+    <!-- // Card List Start -->
+    <div class="col-xs-12 card-list-container" ng-repeat="product in products">
+      <div class="col-sm-8 col-xs-12 card-list-left">
+        <div class="col-xs-6 col-sm-4 img_wrapper">
+          <img src="img/T1.jpg" alt="">
+        </div>
+        <!-- // -->
+        <div class="col-xs-6 col-sm-8 card_details">
+          <h2>solid green cotton tshirt</h2>
+          <p>Style #: <span>MS13KT1906</span></p>
+          <p>Color: <span>Blue</span></p>
+          <p class="visible-xs">Size: <span>S</span></p>
+          <!-- // -->
+          <div class="col-xs-12 nopadding visible-xs quantity_wrappr">
+            <ul data-quantity="">
+              <li>QTY: <input type="text" value="1"></li>
+              <li><sup>$</sup><span>11.00</span></li>
+            </ul>
+          </div>
+          <!-- // -->
+          <ul data-action="" class="hidden-xs">
+            <li><a href="#">EDIT</a></li>
+            <li>|</li>
+            <li><a href="#"><span>X</span> Remove</a></li>
+            <li>|</li>
+            <li><a href="#">Save for Later</a></li>
+          </ul>
+        </div>
+        <!-- // -->
+        <div class="col-xs-12 nopadding visible-xs-">
+          <ul data-action="" class="visible-xs">
+            <li><a href="">EDIT</a></li>
+            <li>|</li>
+            <li><a href=""><span>X</span> Remove</a></li>
+            <li>|</li>
+            <li><a href="">Save for Later</a></li>
+          </ul>
+        </div>
+        <!-- // -->
+      </div>
+      <div class="col-sm-4 col-xs-12 card-list-right hidden-xs">
+        <ul data-quantity="">
+          <li>S</li>
+          <li><input type="text" value="1"></li>
+          <li><sup>$</sup><span>11.00</span></li>
+        </ul>
+      </div>
+    </div>
+    <!-- // Card List End -->
+    <!-- Footer start -->
+    <footer class="col-xs-12">
+      footer
+    </footer>
+    <!-- Footer End -->
+  </div>
+</section>
