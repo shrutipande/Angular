@@ -21,14 +21,14 @@
     </div>
     <!-- // Subnav End -->
     <!-- // Card List Start -->
-    <div class="col-xs-12 card-list-container" ng-repeat="(key, product) in products">
+    <div class="col-xs-12 card-list-container" ng-repeat="(key, product) in products" ng-model="FormData.accountNum">
       <div class="col-sm-8 col-xs-12 card-list-left">
         <div class="col-xs-6 col-sm-4 img_wrapper">
           <img src="{{ products[key].img_src }}" alt="">
         </div>
         <!-- // -->
         <div class="col-xs-6 col-sm-8 card_details">
-          <h2>{{ products[key].p_name }}</h2>
+          <h2 ng-model="productName">{{ products[key].p_name }}</h2>
           <!-- <h2>solid green cotton tshirt</h2> -->
           <p>Style #: <span style>{{ products[key].p_style }}</span></p>
           <p>Color: <span color>{{  products[key].p_selected_color.name }}</span></p>
@@ -36,13 +36,13 @@
           <!-- // -->
           <div class="col-xs-12 nopadding visible-xs quantity_wrappr">
             <ul data-quantity="">
-              <li>QTY: <input type="text" value="1"></li>
-              <li><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice }}</span></li>
+              <li>QTY: <input type="text" ng-model="product.qty"></li>
+              <li><span discount-data><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_price * product.qty }}</span></span> <sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice * product.qty }}</span></li>
             </ul>
           </div>
           <!-- // -->
           <ul data-action="" class="hidden-xs">
-            <li><a href="#">EDIT</a></li>
+            <li><a ng-click="ShowNgDialog()">EDIT</a></li>
             <li>|</li>
             <li><a href="#"><span>X</span> Remove</a></li>
             <li>|</li>
@@ -52,7 +52,7 @@
         <!-- // -->
         <div class="col-xs-12 nopadding visible-xs-">
           <ul data-action="" class="visible-xs">
-            <li><a href="">EDIT</a></li>
+            <li><a ng-click="ShowNgDialog()">EDIT</a></li>
             <li>|</li>
             <li><a href=""><span>X</span> Remove</a></li>
             <li>|</li>
@@ -66,14 +66,39 @@
           <div class="hide">{{ product.qty || (product.qty = 1)}}</div>
           <li>{{ products[key].p_selected_size.code }}</li>
           <li><input type="text" value="1" ng-model="product.qty"></li>
-          <li><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice * product.qty }}</span></li>
+          <li>
+            <div>
+              <p><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_price * product.qty }}</span></p>
+              <p><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice * product.qty }}</span></p>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
     <!-- // Card List End -->
     <!-- Footer start -->
     <footer class="col-xs-12">
-      footer
+        <!-- <a href="" ng-click="ShowNgDialog()">Click Here</a>
+        <input type="text" ng-model="FormData.accountNum" /> -->
+
+      <div class="col-xs-12 col-sm-4 nopadding foot-left hidden-xs">
+        <p><strong>Need help <br>or have questions?</strong></p>
+        <p>Call Customer Service at <br>1-800-555-5555</p>
+        <p><u>Chart with one of <br>our stylists</u></p>
+      </div>
+      <div class="col-xs-12 col-sm-8 foot-right nopadding">
+        <div class="col-xs-12 cupoon_container">
+          <div class="col-xs-12 col-sm-6 nopadding">ENTER PROMOTION CODE<br>OF GIT CARD</div>
+          <div class="col-xs-12 col-sm-6 nopadding">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">APPLY</button>
+              </span>
+            </div><!-- /input-group -->
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- Footer End -->
   </div>

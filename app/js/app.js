@@ -1,4 +1,4 @@
-var app = angular.module('app',['ngRoute']);
+var app = angular.module('app',['ngRoute', 'ngDialog']);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -16,7 +16,7 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller('cartpage', function($scope, $http) {
+app.controller('cartpage', function($scope, $http, ngDialog) {
 
   $scope.products = null;
   $http.get('js/cart.json')
@@ -28,4 +28,18 @@ app.controller('cartpage', function($scope, $http) {
    console.log("error");
    });
   //
+  $scope.FormData={accountNum: ''};
+  $scope.ShowNgDialog = function () {
+      // ngDialog.open({
+      //     template: 'view/drag.html',
+      //     plain: true,
+      //     scope:$scope
+      //
+      // });
+      ngDialog.open({
+          template: 'view/product.html',
+          appendClassName: 'ngdialog-custom'
+      });
+  }
+
 });

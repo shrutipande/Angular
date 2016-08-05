@@ -49,8 +49,8 @@
             ]
          },
          "p_quantity":1,
-         "p_originalprice":11.0,
-         "p_price":11.0,
+         "p_originalprice":11.00,
+         "p_price":11.00,
          "c_currency":"$"
       },
       {
@@ -102,7 +102,7 @@
             ]
          },
          "p_quantity":1,
-         "p_originalprice":17.0,
+         "p_originalprice":17.33,
          "p_price":17.0,
          "c_currency":"$"
       },
@@ -156,7 +156,7 @@
          },
          "p_quantity":1,
          "p_originalprice":21.0,
-         "p_price":9.0,
+         "p_price":9.50,
          "c_currency":"$"
       },
       {
