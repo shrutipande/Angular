@@ -17,12 +17,15 @@ app.config(function($routeProvider) {
 });
 
 app.controller('cartpage', function($scope, $http) {
+
   $scope.products = null;
-  $http.get('https://api.myjson.com/bins/pm0z')
+  $http.get('js/cart.json')
+  //https://api.myjson.com/bins/pm0z
     .then(function successCallback(response) {
     $scope.products = response.data.productsInCart;
     console.log(response.data.productsInCart.length);
    }, function errorCallback(response) {
    console.log("error");
    });
+  //
 });

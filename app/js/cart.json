@@ -2,7 +2,8 @@
    "productsInCart":[
       {
          "p_id":"1",
-         "p_name":"cotton tshirt",
+         "img_src" : "../img/T1.jpg",
+         "p_name" :"cotton tshirt",
          "p_variation":"solid green",
          "p_style":"ms13kt1906",
          "p_selected_color":{
@@ -54,6 +55,7 @@
       },
       {
          "p_id":"2",
+         "img_src" : "../img/T2.jpg",
          "p_name":"print girls tee",
          "p_variation":"pink rainbow",
          "p_style":"ms13kt1906",
@@ -106,6 +108,7 @@
       },
       {
          "p_id":"3",
+         "img_src" : "../img/T3.jpg",
          "p_name":"flower pattern shirt",
          "p_variation":"blue",
          "p_style":"ms13kt1906",
@@ -158,6 +161,7 @@
       },
       {
          "p_id":"4",
+         "img_src" : "../img/T4.jpg",
          "p_name":"check pattern tshirt",
          "p_variation":"mens red",
          "p_style":"ms13kt1906",
@@ -209,4 +213,4 @@
          "c_currency":"$"
       }
    ]
-};
+}

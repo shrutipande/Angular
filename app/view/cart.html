@@ -24,7 +24,7 @@
     <div class="col-xs-12 card-list-container" ng-repeat="(key, product) in products">
       <div class="col-sm-8 col-xs-12 card-list-left">
         <div class="col-xs-6 col-sm-4 img_wrapper">
-          <img src="img/T1.jpg" alt="">
+          <img src="{{ products[key].img_src }}" alt="">
         </div>
         <!-- // -->
         <div class="col-xs-6 col-sm-8 card_details">
@@ -63,9 +63,10 @@
       </div>
       <div class="col-sm-4 col-xs-12 card-list-right hidden-xs">
         <ul data-quantity="">
+          <div class="hide">{{ product.qty || (product.qty = 1)}}</div>
           <li>{{ products[key].p_selected_size.code }}</li>
-          <li><input type="text" value="1"></li>
-          <li><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice }}</span></li>
+          <li><input type="text" value="1" ng-model="product.qty"></li>
+          <li><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice * product.qty }}</span></li>
         </ul>
       </div>
     </div>
