@@ -28,18 +28,26 @@ app.controller('cartpage', function($scope, $http, ngDialog) {
    console.log("error");
    });
   //
-  $scope.FormData={accountNum: ''};
   $scope.ShowNgDialog = function () {
-      // ngDialog.open({
-      //     template: 'view/drag.html',
-      //     plain: true,
-      //     scope:$scope
-      //
-      // });
-      ngDialog.open({
-          template: 'view/product.html',
-          appendClassName: 'ngdialog-custom'
-      });
+    ngDialog.open({
+        template: 'view/product.html',
+        appendClassName: 'ngdialog-custom'
+    });
   }
+  //
+  function myCtrl ($scope) {
+      $scope.units = [
+          {'id': 10, 'label': 'test1'},
+          {'id': 27, 'label': 'test2'},
+          {'id': 39, 'label': 'test3'},
+      ]
+
+          $scope.data = {
+          'id': 1,
+          'unit': 27
+          }
+
+  };
+
 
 });
