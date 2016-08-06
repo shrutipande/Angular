@@ -74,7 +74,7 @@
 .ngdialog.ngdialog-theme-default .ngdialog-content {
   -webkit-animation: ngdialog-flyin .5s;
   animation: ngdialog-flyin .5s;
-  background: #fff;
+  background: #fefefe;
   border-radius: 0px;;
   color: #444;
   font-family: 'Roboto',sans-serif;
@@ -100,7 +100,7 @@
   background: transparent;
   border-radius: 3px;
   color: #bbb;
-  content: '\00D7';
+  content: url('../img/close.jpg');
   font-size: 26px;
   font-weight: 400;
   height: 30px;
@@ -417,15 +417,16 @@ footer {
     }
   }
   .foot-right {
+    color: #939393;
     .cupoon_container {
-      padding-bottom: 25px;
+      padding: 0px 0px 15px 0px !important;
       border-bottom: solid 6px #dddbdc;
       > div:first-child {
         font-weight: 300;
         color: #939393;
       }
       .form-control {
-        width: 153px;
+        width: 170px;
         margin-right: 5px;
         border-radius: 0px;
         border: solid 1px #939393;
@@ -443,6 +444,40 @@ footer {
             background-color: inherit;
           }
         }
+      }
+    }
+    .liner {
+      padding: 15px 0px !important;
+      span {
+        font-size: 20px;
+        color: #000;
+        sup {
+          top: -3px;
+          font-size: 13px;
+        }
+      }
+      strong {
+        color: #000;
+      }
+      p {
+        margin: 0px;
+      }
+    }
+    .b-bottom {
+      border-bottom: solid 1px #b9b8b8;
+    }
+    .total-data {
+      p {
+        margin: 0px;
+        &:first-child {
+          font-size: 20px;
+        }
+      }
+    }
+    .b-bottom6 {
+      border-bottom: solid 6px #dddbdc;
+      sup {
+        font-size: 14px !important;
       }
     }
   }
@@ -529,20 +564,23 @@ footer {
         }
       }
     }
-    .edit_btn {
-      border-radius: 0px;
-      background-color: #1069bd;
-      color: #fff;
-      border: none;
-      padding: 13px;
-      width: 100%;
-      margin-bottom: 10px;
-    }
     a {
       display: block;
       text-align: center;
       color: #7d7d7d;
     }
+  }
+}
+.edit_btn {
+  border-radius: 0px !important;
+  background-color: #1069bd;
+  color: #fff;
+  border: none;
+  padding: 13px !important;
+  width: 100%;
+  margin-bottom: 10px;
+  &:hover {
+    color: #fff !important;
   }
 }
 // product-img
@@ -553,6 +591,15 @@ footer {
   img {
     height: 100%;
   }
+}
+.secure {
+  margin-top: 15px;
+}
+.link {
+  color: #757373;
+  line-height: 49px;
+  font-size: 13px;
+  text-decoration: underline;
 }
 // color
 [data-color="green"] { background-color: #A3D2A1; }

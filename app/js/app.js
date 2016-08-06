@@ -23,7 +23,7 @@ app.controller('cartpage', function($scope, $http, ngDialog) {
   //https://api.myjson.com/bins/pm0z
     .then(function successCallback(response) {
     $scope.products = response.data.productsInCart;
-    console.log(response.data.productsInCart.length);
+    //console.log(response.data.productsInCart.length);
    }, function errorCallback(response) {
    console.log("error");
    });
@@ -31,23 +31,10 @@ app.controller('cartpage', function($scope, $http, ngDialog) {
   $scope.ShowNgDialog = function () {
     ngDialog.open({
         template: 'view/product.html',
-        appendClassName: 'ngdialog-custom'
+        appendClassName: 'ngdialog-custom',
+        data:$scope.obj
     });
+    //
   }
   //
-  function myCtrl ($scope) {
-      $scope.units = [
-          {'id': 10, 'label': 'test1'},
-          {'id': 27, 'label': 'test2'},
-          {'id': 39, 'label': 'test3'},
-      ]
-
-          $scope.data = {
-          'id': 1,
-          'unit': 27
-          }
-
-  };
-
-
 });
