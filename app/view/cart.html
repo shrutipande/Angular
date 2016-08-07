@@ -21,14 +21,14 @@
     </div>
     <!-- // Subnav End -->
     <!-- // Card List Start -->
-    <div class="col-xs-12 card-list-container" ng-repeat="(key, product) in products" ng-model="FormData.accountNum">
+    <div class="col-xs-12 card-list-container" ng-repeat="(key, product) in products">
       <div class="col-sm-8 col-xs-12 card-list-left">
         <div class="col-xs-6 col-sm-4 img_wrapper">
           <img src="{{ products[key].img_src }}" alt="">
         </div>
         <!-- // -->
         <div class="col-xs-6 col-sm-8 card_details">
-          <h2 ng-model="productName">{{ products[key].p_name }}</h2>
+          <h2>{{ products[key].p_name }}</h2>
           <!-- <h2>solid green cotton tshirt</h2> -->
           <p>Style #: <span style>{{ products[key].p_style }}</span></p>
           <p>Color: <span color>{{  products[key].p_selected_color.name }}</span></p>

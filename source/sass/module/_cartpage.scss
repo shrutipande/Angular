@@ -513,6 +513,7 @@ footer {
     p {
       text-align: center;
       font-size: 13px;
+      text-transform: uppercase;
     }
     ul[role="color"] {
       list-style: none;
@@ -561,6 +562,9 @@ footer {
           border-radius: 0px;
           padding: 7px 10px;
           font-size: 13px;
+          option {
+            text-transform: uppercase;
+          }
         }
       }
     }

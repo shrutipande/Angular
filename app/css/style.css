@@ -514,6 +514,7 @@ footer .foot-right .b-bottom6 sup {
 .add-prod-details-container .add-prod-details p {
   text-align: center;
   font-size: 13px;
+  text-transform: uppercase;
 }
 .add-prod-details-container .add-prod-details ul[role="color"] {
   list-style: none;
@@ -563,6 +564,9 @@ footer .foot-right .b-bottom6 sup {
   border-radius: 0px;
   padding: 7px 10px;
   font-size: 13px;
+}
+.add-prod-details-container .add-prod-details ul[role="dropdown"] li select option {
+  text-transform: uppercase;
 }
 .add-prod-details-container .add-prod-details a {
   display: block;

@@ -32,7 +32,7 @@ app.controller('cartpage', function($scope, $http, ngDialog) {
     ngDialog.open({
         template: 'view/product.html',
         appendClassName: 'ngdialog-custom',
-        data:$scope.obj
+        scope:$scope
     });
     //
   }
