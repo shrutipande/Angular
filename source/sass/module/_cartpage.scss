@@ -540,6 +540,9 @@ footer {
             height: 100%;
           }
         }
+        &:last-child {
+          display: none;
+        }
       }
     }
     //
@@ -562,6 +565,7 @@ footer {
           border-radius: 0px;
           padding: 7px 10px;
           font-size: 13px;
+          background-color: #fff;
           option {
             text-transform: uppercase;
           }

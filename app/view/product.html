@@ -1,12 +1,12 @@
 <!-- <div class="col-xs-12 col-sm-5 nopadding" ng-repeat="(key, cartdata) in products"> -->
-<div class="col-xs-12 col-sm-5 nopadding" ng-repeat="(key, cartdata) in products">
+<div class="col-xs-12 col-sm-5 nopadding">
   <div class="col-xs-12 add-prod-details-container">
     <div class="col-xs-12 add-prod-details">
-      <h2>{{ products[key].p_name }}</h2>
-      <h3><sup>{{ products[key].c_currency }}</sup> {{ products[key].p_originalprice }}</h3>
-      <p>{{ products[key].p_variation }}</p>
+      <h2>{{ currentEditingProduct.p_name }}</h2>
+      <h3><sup>{{ currentEditingProduct.c_currency }}</sup> {{ currentEditingProduct.p_originalprice }}</h3>
+      <p>{{ currentEditingProduct.p_variation }}</p>
       <ul role="color">
-        <li ng-repeat="(key, color) in products">
+        <li ng-repeat="(key, colors) in products">
           <label for="{{ products[key].p_available_options.colors[key].name }}">
             <input id="{{ products[key].p_available_options.colors[key].name }}" name="color" type="radio">
             <span data-color="{{ products[key].p_available_options.colors[key].name }}">&nbsp;</span>
@@ -22,7 +22,7 @@
       <ul role="dropdown">
         <li>
           <select name="" id="">
-            <option value="0" ng-repeat="(key, size) in products">{{ products[key].p_available_options.sizes[key].code }}</option>
+            <option value="0" ng-repeat="(key, size) in products">{{ currentEditingProduct.p_available_options.sizes[key].code }}</option>
           </select>
         </li>
         <li>
@@ -41,5 +41,5 @@
   </div>
 </div>
 <div class="col-xs-12 col-sm-7 product-img">
-  <img src="img/T4.jpg" alt="">
+  <img src="{{currentEditingProduct.img_src}}" alt="">
 </div>

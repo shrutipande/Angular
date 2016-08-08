@@ -28,7 +28,8 @@ app.controller('cartpage', function($scope, $http, ngDialog) {
    console.log("error");
    });
   //
-  $scope.ShowNgDialog = function () {
+  $scope.ShowNgDialog = function (product) {
+    $scope.currentEditingProduct = product;
     ngDialog.open({
         template: 'view/product.html',
         appendClassName: 'ngdialog-custom',
@@ -37,4 +38,19 @@ app.controller('cartpage', function($scope, $http, ngDialog) {
     //
   }
   //
+  $scope.getSubTotal = function(){
+    var products = $scope.products,
+      index = 0.
+    return products.reduce(function(total,product){
+      return total + product.qty * product.p_price;
+    },0);
+  }
+  //
+  $scope.getEstimateTotal = function(){
+    var products = $scope.products,
+      index = 0.
+    return products.reduce(function(total,product){
+      return total + product.qty * product.p_price;
+    },0);
+  }
 });

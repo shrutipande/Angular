@@ -37,12 +37,15 @@
           <div class="col-xs-12 nopadding visible-xs quantity_wrappr">
             <ul data-quantity="">
               <li>QTY: <input type="text" ng-model="product.qty"></li>
-              <li><span discount-data><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_price * product.qty }}</span></span> <sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice * product.qty }}</span></li>
+              <li>
+                <span discount-data><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_price * product.qty }}</span></span>
+                <span original-data ng-model="val"><sup>{{ products[key].c_currency }}</sup><span>{{ products[key].p_originalprice * product.qty }}</span></span>
+              </li>
             </ul>
           </div>
           <!-- // -->
           <ul data-action="" class="hidden-xs">
-            <li><a ng-click="ShowNgDialog()">EDIT</a></li>
+            <li><a ng-click="ShowNgDialog(product)">EDIT</a></li>
             <li>|</li>
             <li><a href="#"><span>X</span> Remove</a></li>
             <li>|</li>
@@ -102,14 +105,14 @@
         <div class="col-xs-12 liner">
           <div class="col-xs-8 nopadding text-left">SUBTOTAL</div>
           <div class="col-xs-4 nopadding text-right">
-            <span><sup>$</sup>37.00</span>
+            <span><sup>$</sup> {{ getSubTotal() }}</span>
           </div>
         </div>
         <!-- // -->
         <div class="col-xs-12 liner">
           <div class="col-xs-8 nopadding text-left">PROMOTION CODE <b>JF10</b> APPLIED</div>
           <div class="col-xs-4 nopadding text-right">
-            <span>-<sup>$</sup>7.00</span>
+            <span>-<sup>$</sup><span id="promotion">7.00</span></span>
           </div>
         </div>
         <!-- // -->
@@ -129,7 +132,7 @@
             <p><small>Tax will be applied during checkout</small></p>
           </div>
           <div class="col-xs-4 nopadding text-right">
-            <span><sup>$</sup>30.00</span>
+            <span><sup>$</sup>{{ getEstimateTotal() - 7 }}</span>
           </div>
         </div>
         <!-- // -->
